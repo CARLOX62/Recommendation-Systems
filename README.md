@@ -72,8 +72,6 @@ It provides personalized suggestions for:
 └── README.md
 ```
 
----
-
 ## 📦 Dataset & Model Access (Google Drive Support)
 
 Since model files are large, they are stored in **Google Drive** and downloaded automatically when needed.
@@ -100,6 +98,7 @@ for filename, url in files.items():
         gdown.download(url, save_path, quiet=False)
 
 print("✅ All required model files are ready!")
+
 ```
 
 | File Name | Type | Purpose |
@@ -112,6 +111,29 @@ print("✅ All required model files are ready!")
 
 ---
 
+## 📥 Download Dataset & Model Files
+
+Since some files are large (datasets + pickle models), you can download them from Google Drive:
+
+🔗 **Google Drive Link:** 👉 _<Paste-your-link-here>_
+
+After downloading, place the files in the project root directory as shown in structure above.
+
+---
+
+## 🧪 Create a Virtual Environment
+
+### ▶ Windows
+```
+python -m venv venv
+venv\Scripts\activate
+```
+
+### ▶ macOS / Linux
+```
+python3 -m venv venv
+source venv/bin/activate
+```
 ## 🛠️ Installation & Setup
 
 ```bash
@@ -126,6 +148,20 @@ pip install -r requirements.txt
 python app.py
 ```
 
+## 🧪 Create a Virtual Environment
+
+### ▶ Windows
+```
+python -m venv venv
+venv\Scripts\activate
+```
+
+### ▶ macOS / Linux
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
 ---
 
 ## 🎥 Live UI Preview
@@ -136,10 +172,7 @@ python app.py
  <img width="1920" height="1080" alt="Screenshot (369)" src="https://github.com/user-attachments/assets/691f2b1c-8246-45f3-a29b-2d5bd7e9097c" />
  <img width="1920" height="1080" alt="Screenshot (370)" src="https://github.com/user-attachments/assets/05f2f7f9-4121-4bb4-bb1b-d5bc52867025" />
  <img width="1920" height="1080" alt="Screenshot (371)" src="https://github.com/user-attachments/assets/c70cd101-c1e5-4894-8b19-5a40a03bdca9" /> 
-
-
-
-
+ 
 ---
 
 ## 🚀 Future Enhancements
