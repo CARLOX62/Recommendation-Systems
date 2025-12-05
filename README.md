@@ -138,7 +138,7 @@ source venv/bin/activate
 
 ```bash
 # Clone repository
-git clone https://github.com/CARLOX62/Recommendation-System.git
+git clone https://github.com/CARLOX62/Recommendation-Systems.git
 cd Recommendation-System
 
 # Install dependencies
