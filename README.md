@@ -115,7 +115,7 @@ print("✅ All required model files are ready!")
 
 Since some files are large (datasets + pickle models), you can download them from Google Drive:
 
-🔗 **Google Drive Link:** 👉 _<Paste-your-link-here>_
+🔗 **Google Drive Link:** 👉 _<https://drive.google.com/drive/folders/1LLuPREHLQQcBGEInTY60GMmszdNY7V7u?usp=drive_link>_
 
 After downloading, place the files in the project root directory as shown in structure above.
 
