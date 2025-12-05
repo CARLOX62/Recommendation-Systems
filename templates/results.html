@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ category }} Recommendations</h1>
+        <a href="/">Back to Home</a>
+    </header>
+    <main>
+        {% if message %}
+        <p>{{ message }}</p>
+        {% else %}
+        {% if category == 'Books' %}
+        <div class="book-grid">
+            {% for rec in recommendations %}
+            <div class="book-item">
+                <img src="{{ rec.image }}" alt="{{ rec.title }}">
+                <h3>{{ rec.title }}</h3>
+                <p>Author: {{ rec.author }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% elif category == 'Movies' %}
+        <div class="movie-grid">
+            {% for rec in recommendations %}
+            <div class="movie-item">
+                <img src="{{ rec.poster }}" alt="{{ rec.title }}">
+                <h3>{{ rec.title }}</h3>
+                <p>⭐ {{ rec.rating }}/10</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% elif category == 'Music' %}
+        <div class="music-list">
+            {% for rec in recommendations %}
+            <div class="song-item">
+                <img src="{{ rec.poster }}" alt="{{ rec.title }}">
+                <h3>{{ rec.title }}</h3>
+            </div>
+            {% endfor %}
+        </div>
+        {% elif category == 'Fashion' %}
+        <div class="fashion-grid">
+            {% for rec in recommendations %}
+            <div class="fashion-item">
+                <img src="{{ rec.image }}" alt="Recommended Fashion">
+                <h3>Recommended Item</h3>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2026 Recommender System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

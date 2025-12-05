@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Fashion Recommendations</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/books">Books</a>
+            <a href="/movies">Movies</a>
+            <a href="/music">Music</a>
+            <a href="/fashion">Fashion</a>
+        </nav>
+    </header>
+    <main>
+        <section id="popular-fashion">
+            <h2>Popular Fashion</h2>
+            <div class="fashion-grid">
+                {% for item in popular_fashion %}
+                <div class="fashion-item">
+                    <img src="{{ item.image }}" alt="Fashion Item">
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <section id="recommendation-form">
+            <div class="form-container">
+                <h2>Get Fashion Recommendations</h2>
+                <form action="/recommend_fashion" method="post" enctype="multipart/form-data">
+                    <input type="file" name="image" accept="image/*" required>
+                    <button type="submit">Get Recommendations</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Recommender System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

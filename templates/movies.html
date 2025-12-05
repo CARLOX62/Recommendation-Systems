@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Movie Recommendations</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/books">Books</a>
+            <a href="/movies">Movies</a>
+            <a href="/music">Music</a>
+            <a href="/fashion">Fashion</a>
+        </nav>
+    </header>
+    <main>
+        <section id="popular-movies">
+            <h2>Popular Movies</h2>
+            <div class="movie-grid">
+                {% for movie in popular_movies %}
+                <div class="movie-item">
+                    <img src="{{ movie.poster }}" alt="{{ movie.title }}">
+                    <h3>{{ movie.title }}</h3>
+                    <p>⭐ {{ movie.rating }}/10</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <section id="recommendation-form">
+            <div class="form-container">
+                <h2>Get Movie Recommendations</h2>
+                <form action="/recommend_movies" method="post">
+                    <input type="text" name="movie_name" placeholder="Enter movie name" required>
+                    <button type="submit">Get Recommendations</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Recommender System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

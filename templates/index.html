@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommender System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Ultimate Recommender System</h1>
+        <p>Get personalized recommendations for Books, Movies, Music, and Fashion!</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/books">Books</a>
+            <a href="/movies">Movies</a>
+            <a href="/music">Music</a>
+            <a href="/fashion">Fashion</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Our Project</h2>
+            <p>Welcome to the Ultimate AI-Powered Recommender System! This cutting-edge platform leverages advanced machine learning algorithms to provide personalized recommendations across multiple domains. Whether you're looking for your next favorite book, movie, song, or fashion item, our system analyzes your preferences and suggests the best options tailored just for you.</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Personalized Recommendations</h3>
+                    <p>Get tailored suggestions based on your unique tastes and preferences.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Multi-Domain Support</h3>
+                    <p>Explore recommendations for books, movies, music, and fashion all in one place.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Advanced AI Algorithms</h3>
+                    <p>Powered by state-of-the-art machine learning techniques for accurate predictions.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>User-Friendly Interface</h3>
+                    <p>Intuitive design that makes discovering new content effortless and enjoyable.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="technologies">
+            <h2>Technologies Used</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Flask - Python web framework</li>
+                        <li>TensorFlow - Machine learning library</li>
+                        <li>scikit-learn - ML algorithms</li>
+                        <li>NumPy & Pandas - Data processing</li>
+                    </ul>
+                </div>
+                <div class="tech-item">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5 & CSS3 - Modern web standards</li>
+                        <li>Jinja2 - Template engine</li>
+                        <li>Responsive design - Mobile-friendly</li>
+                    </ul>
+                </div>
+                <div class="tech-item">
+                    <h3>APIs & Data</h3>
+                    <ul>
+                        <li>TMDB API - Movie data</li>
+                        <li>Spotify API - Music data</li>
+                        <li>Pickle - Model serialization</li>
+                        <li>ResNet50 - Image processing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <h3>1. Choose Your Category</h3>
+                    <p>Select from books, movies, music, or fashion to get started.</p>
+                </div>
+                <div class="step-item">
+                    <h3>2. Input Your Preferences</h3>
+                    <p>Enter a book title, movie name, song, or upload a fashion image.</p>
+                </div>
+                <div class="step-item">
+                    <h3>3. Get Recommendations</h3>
+                    <p>Our AI analyzes your input and provides personalized suggestions.</p>
+                </div>
+                <div class="step-item">
+                    <h3>4. Explore & Discover</h3>
+                    <p>Discover new favorites and expand your horizons!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats">
+            <h2>Project Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>10K+</h3>
+                    <p>Books in Database</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5K+</h3>
+                    <p>Movies Available</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50K+</h3>
+                    <p>Songs Indexed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100K+</h3>
+                    <p>Fashion Items</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories">
+            <h2>Choose a Category</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <a href="/books">
+                        <h3>Books</h3>
+                        <p>Get personalized book recommendations</p>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="/movies">
+                        <h3>Movies</h3>
+                        <p>Get personalized movie recommendations</p>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="/music">
+                        <h3>Music</h3>
+                        <p>Get personalized music recommendations</p>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="/fashion">
+                        <h3>Fashion</h3>
+                        <p>Get personalized fashion recommendations</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Recommender System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

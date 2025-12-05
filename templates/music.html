@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Music Recommendations</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/books">Books</a>
+            <a href="/movies">Movies</a>
+            <a href="/music">Music</a>
+            <a href="/fashion">Fashion</a>
+        </nav>
+    </header>
+    <main>
+        <section id="popular-music">
+            <h2>Popular Music</h2>
+            <div class="music-grid">
+                {% for song in popular_music %}
+                <div class="music-item">
+                    <img src="{{ song.poster }}" alt="{{ song.song }}">
+                    <h3>{{ song.song }}</h3>
+                    <p>Artist: {{ song.artist }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <section id="recommendation-form">
+            <div class="form-container">
+                <h2>Get Music Recommendations</h2>
+                <form action="/recommend_music" method="post">
+                    <input type="text" name="song_name" placeholder="Enter song name" required>
+                    <button type="submit">Get Recommendations</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Recommender System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
